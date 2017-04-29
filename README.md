@@ -1,6 +1,6 @@
 # 对原Repo的修改
 
-这个repo是我对于[上海交通大学学位论文模板](https://github.com/weijianwen/SJTUThesis/)的修改版本，感谢原作者的工作！主要修改如下：
+这个repo是我对于[上海交通大学学位论文模板](https://github.com/weijianwen/SJTUThesis/)的修改版本，主要修改如下：
 
 1. 加入了一个小插件`importFonts_external.sty`，直接使用本项目`fonts`目录下的字体。不需要安装字体。解决了使用sublime-latextools等工具尝试直接编译项目时找不到字体的问题。同时也便于更换其他字体。
 2. 与之对应地，在`thesis.tex`中加入了一行usepackage。
@@ -9,14 +9,14 @@
 
 **测试环境**: 
 - OS X El Capitan 10.11.6
-- MacTex 2016
-- 使用Sublime Text 2的LaTexTools插件直接从文本编辑器里编译。版本号3.13.6。
+- MacTeX 2016
+- 使用Sublime Text 2的LaTeXTools插件直接从文本编辑器里编译。版本号3.13.6。
 
 **Trouble Shooting**:
 - El Capitan下和路径相关的bug很多都是同一个原因引起的: Tex相关的binary files不再存在于`/usr/texbin`, 而是`/Library/TeX/texbin`。所以将各种设置中以前者开头的路径名改为后者，基本都能够解决。详情可见[这里](https://tex.stackexchange.com/questions/274179/mactex-error-xelatex-command-not-found)。
 
 
-以下为原项目的readme，再次感谢原作者😃。
+以下为原项目的readme，感谢原作者的工作！😃。
 
 
 
