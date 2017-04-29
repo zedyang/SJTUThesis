@@ -11,8 +11,8 @@
 - `MacTex` 2016
 - 使用sublime text 2的`LaTexTools`插件直接从文本编辑器里编译。版本号3.13.6。
 
-**Trouble Shooting**
-El Caitan下和路径相关的bug很多都是同一个原因引起的: Tex相关的binary files不再存在于`/usr/texbin`, 而是`/Library/TeX/texbin`。所以将各种设置中以前者开头的路径名改为后者，基本都能够解决。详情可见[这里](https://tex.stackexchange.com/questions/274179/mactex-error-xelatex-command-not-found)。
+**Trouble Shooting**:
+- El Caitan下和路径相关的bug很多都是同一个原因引起的: Tex相关的binary files不再存在于`/usr/texbin`, 而是`/Library/TeX/texbin`。所以将各种设置中以前者开头的路径名改为后者，基本都能够解决。详情可见[这里](https://tex.stackexchange.com/questions/274179/mactex-error-xelatex-command-not-found)。
 
 
 以下为原项目的readme，再次感谢原作者😃。
