@@ -173,16 +173,16 @@ i,j作为虚数单位时，也应该使用“直立体”为了明显，还加�
 
 \XeTeX 可以很方便地插入PDF、PNG、JPG格式的图片。
 
-插入PNG/JPG的例子如\ref{fig:SRR}所示。
-这两个水平并列放置的图共享一个“图标题”(table caption)，没有各自的小标题。
+%插入PNG/JPG的例子如\ref{fig:SRR}所示。
+%这两个水平并列放置的图共享一个“图标题”(table caption)，没有各自的小标题。
 
-\begin{figure}[!htp]
-  \centering
-  \includegraphics[width=0.3\textwidth]{example/sjtulogo.png}
-  \hspace{1cm}
-  \includegraphics[width=0.3\textwidth]{example/sjtulogo.jpg}
-  \bicaption[fig:SRR]{这里将出现在插图索引中}{中文题图}{Fig}{English caption}
-\end{figure}
+%\begin{figure}[!htp]
+%  \centering
+%  \includegraphics[width=0.3\textwidth]{example/sjtulogo.png}
+%  \hspace{1cm}
+%  \includegraphics[width=0.3\textwidth]{example/sjtulogo.jpg}
+%  \bicaption[fig:SRR]{这里将出现在插图索引中}{中文题图}{Fig}{English caption}
+%\end{figure}
 
 % 这里还有插入eps图像和pdf图像的例子，如图\ref{fig:epspdf:a}和图\ref{fig:epspdf:b}。这里将EPS和PDF图片作为子图插入，每个子图有自己的小标题。并列子图的功能是使用subfigure宏包提供的。
 % 
@@ -293,42 +293,44 @@ i,j作为虚数单位时，也应该使用“直立体”为了明显，还加�
 
 下面是在Google Scholar上搜索到的一条文献信息，格式是纯文本：
 
-\begin{lstlisting}[caption={从Google Scholar找到的参考文献条目}, label=googlescholar, escapeinside="", numbers=none]
+\begin{lstlisting}[caption={从Google Scholar找到的参考文献条目}, label=googlescholar, float, escapeinside="", numbers=none]
     @phdthesis{"白2008信用风险传染模型和信用衍生品的定价",
-      title={"信用风险传染模型和信用衍生品的定价"},
+      title={{"信用风险传染模型和信用衍生品的定价"}},
       author={"白云芬"},
       year={2008},
       school={"上海交通大学"}
     } 
 \end{lstlisting}
 
-推荐修改后在bib文件中的内容为：
+为了方便引用，建议将文献别名改用ASCII表示。
+中文文献的处理有别于英文文献，对中文参考文献需要增加“language”域显式说明。
 
-\begin{lstlisting}[caption={修改后的参考文献条目}, label=itemok, escapeinside="", numbers=none]
+\begin{lstlisting}[caption={修改后的参考文献条目}, label=itemok, float, escapeinside="", numbers=none]
   @phdthesis{bai2008,
-    title={"信用风险传染模型和信用衍生品的定价"},
+    title={{"信用风险传染模型和信用衍生品的定价"}},
     author={"白云芬"},
-    date={2008},
+    year={2008},
+    language={zh},
     address={"上海"},
     school={"上海交通大学"}
   } 
 \end{lstlisting}
 
 按照教务处的要求，参考文献外观应符合国标GBT7714的要求\footnote{\url{http://www.cces.net.cn/guild/sites/tmxb/Files/19798_2.pdf}}。
-在模板中，表现形式的控制逻辑通过bibla­tex-gb7714-2015包实现\footnote{\url{https://www.ctan.org/pkg/biblatex-gb7714-2015}}，基于{Bib\LaTeX}管理文献。在目前的多数TeX发行版中，可能都没有默认包含biblatex-gb7714-2015，需要手动安装。
+在模板中，表现形式的控制逻辑在GBT7714-2005NLang.bst中实现\footnote{\url{http://bbs.ctex.org/viewthread.php?tid=33571}}，是使用{\BibTeX}特有的堆栈式语言实现的\footnote{\url{http://ftp.ctex.org/mirrors/CTAN/info/bibtex/tamethebeast/ttb_en.pdf}}。
 
-正文中引用参考文献时，用\verb+\cite{key1,key2,key3...}+可以产生“上标引用的参考文献”，
-如\cite{Meta_CN,chen2007act,DPMG}。
-使用\verb+\citen{key1,key2,key3...}+则可以产生水平引用的参考文献，例如\citen{JohnD,zhubajie,IEEE-1363}。
-请看下面的例子，将会穿插使用水平的和上标的参考文献：关于书的\citen{Meta_CN,JohnD,IEEE-1363}，关于期刊的\cite{chen2007act,chen2007ewi}，
-会议论文\citen{DPMG,kocher99,cnproceed}，
-硕士学位论文\citen{zhubajie,metamori2004}，博士学位论文\cite{shaheshang,FistSystem01,bai2008}，标准文件\citen{IEEE-1363}，技术报告\cite{NPB2}，电子文献\citen{xiaoyu2001, CHRISTINE1998}，用户手册\citen{RManual}。
+正文中引用参考文献时，用\verb+\supercite{key1,key2,key3...}+可以产生“上标引用的参考文献”，
+如\supercite{Meta_CN,chen2007act,DPMG}。
+使用\verb+\parencite{key1,key2,key3...}+则可以产生水平引用的参考文献，例如\parencite{JohnD,zhubajie,IEEE-1363}。
+请看下面的例子，将会穿插使用水平的和上标的参考文献：关于书的\parencite{Meta_CN,JohnD,IEEE-1363}，关于期刊的\supercite{chen2007act,chen2007ewi}，
+会议论文\parencite{DPMG,kocher99,cnproceed}，
+硕士学位论文\parencite{zhubajie,metamori2004}，博士学位论文\supercite{shaheshang,FistSystem01,bai2008}，标准文件\parencite{IEEE-1363}，技术报告\supercite{NPB2}，电子文献\parencite{xiaoyu2001, CHRISTINE1998}，用户手册\parencite{RManual}。
 
 总结一些注意事项：
 \begin{itemize}
 \item 参考文献只有在正文中被引用了，才会在最后的参考文献列表中出现；
 \item 参考文献“数据库文件”bib是纯文本文件，请使用UTF-8编码，不要使用GBK编码；
-\item 参考文献条目中默认通过date域输入时间。兼容使用year域时会产生编译warning，可忽略。
+\item 参考文献条目中通过language域是否为空判断是否是中文文献；
 \end{itemize}
 
 \section{用listings插入源代码}
@@ -368,126 +370,45 @@ int main() {
 }
 \end{lstlisting}
 
-\section{用algorithm和algorithmicx宏包插入算法描述}
+\section{用algorithm和algorithmic宏包插入算法描述}
 
-algorithmicx 比 algorithmic 增加了一些命令。
-示例如算法\ref{algo:sum_100}和算法\ref{algo:merge_sort}，
-后者的代码来自\href{http://hustsxh.is-programmer.com/posts/38801.html}{xhSong的博客}。
-algorithmicx的详细使用方法见\href{http://mirror.hust.edu.cn/CTAN/macros/latex/contrib/algorithmicx/algorithmicx.pdf}{官方README}。
-使用算法宏包时，算法出现的位置很多时候不按照tex文件里的书写顺序, 
-需要强制定位时可以使用\verb+\begin{algorithm}[H]+
-\footnote{http://tex.stackexchange.com/questions/165021/fixing-the-location-of-the-appearance-in-algorithmicx-environment}
-
-这是写在算法\ref{algo:sum_100}前面的一段话，在生成的文件里它会出现在算法\ref{algo:sum_100}前面。
+如算法\ref{algo:sum_I_want}所示。
 
 \begin{algorithm}
-% \begin{algorithm}[H] % 强制定位
-\caption{求100以内的整数和}
-\label{algo:sum_100}
-\begin{algorithmic}[1] %每行显示行号
-\Ensure 100以内的整数和 % 输出
-\State $sum \gets 0$
-\For{$i = 0 \to 100$}
-    \State $sum \gets sum + i$
-  \EndFor
+\caption{求和算法}
+\label{algo:sum_I_want}
+\begin{algorithmic}
+\REQUIRE $n \geq 1$                  %输入条件
+\ENSURE $Sum = 1 + \cdots + n$       %输出
+\STATE $Sum \leftarrow 0$            %\STATE 命名演示
+\IF {$n < 1$}                        %条件语句
+\PRINT {Input Error}                 %打印语句
+\ENDIF
+\RETURN Sum
 \end{algorithmic}
 \end{algorithm}
 
-这是写在两个算法中间的一段话，当算法\ref{algo:sum_100}不使用\verb+\begin{algorithm}[H]+时它也会出现在算法\ref{algo:sum_100}前面。
-
-对于很长的算法，单一的算法块\verb+\begin{algorithm}...\end{algorithm}+是不能自动跨页的
-\footnote{http://tex.stackexchange.com/questions/70733/latex-algorithm-not-display-under-correct-section}，
-会出现的情况有：
-
-\begin{itemize}
-  \item 该页放不下当前的算法，留下大片空白，算法在下一页显示
-  \item 单一页面放不下当前的算法，显示时超过页码的位置直到超出整个页面范围
-\end{itemize}
-
-解决方法有：
-
-\begin{itemize}
-  \item (推荐)使用\verb+algstore{algname}+和\verb+algrestore{algname}+来讲算法分为两个部分\footnote{http://tex.stackexchange.com/questions/29816/algorithm-over-2-pages}，如算法\ref{algo:merge_sort}。
-  \item 人工拆分算法为多个小的部分。
-\end{itemize}
+王凡教授\footnote{\url{http://cc.ee.ntu.edu.tw/~farn/}}对algorithmic做了扩展，支持\verb+STATE+、\verb+SWITCH+和\verb+CASE+等语句。
 
 \begin{algorithm}
-% \begin{algorithm}[H] % 强制定位
-\caption{用归并排序求逆序数}
-\label{algo:merge_sort}
-\begin{algorithmic}[1] %每行显示行号
-\Require $Array$数组，$n$数组大小 % 输入
-\Ensure 逆序数 % 输出
-\Function {MergerSort}{$Array, left, right$}
-  \State $result \gets 0$
-  \If {$left < right$}
-    \State $middle \gets (left + right) / 2$
-    \State $result \gets result +$ \Call{MergerSort}{$Array, left, middle$}
-    \State $result \gets result +$ \Call{MergerSort}{$Array, middle, right$}
-    \State $result \gets result +$ \Call{Merger}{$Array,left,middle,right$}
-  \EndIf
-  \State \Return{$result$}
-\EndFunction
-\State %空一行
-\Function{Merger}{$Array, left, middle, right$}
-  \State $i\gets left$
-  \State $j\gets middle$
-  \State $k\gets 0$
-  \State $result \gets 0$
-  \While{$i<middle$ \textbf{and} $j<right$}
-    \If{$Array[i]<Array[j]$}
-      \State $B[k++]\gets Array[i++]$
-    \Else
-      \State $B[k++] \gets Array[j++]$
-      \State $result \gets result + (middle - i)$
-    \EndIf
-  \EndWhile
-  \algstore{MergeSort}
-\end{algorithmic}
-\end{algorithm}
+\caption{fibonacci}
+\label{algo: Fibonacci Sequence}
+\begin{algorithmic}
+\REQUIRE $num$
 
-\begin{algorithm}
-\begin{algorithmic}[1]
-  \algrestore{MergeSort}
-  \While{$i<middle$}
-    \State $B[k++] \gets Array[i++]$
-  \EndWhile
-  \While{$j<right$}
-    \State $B[k++] \gets Array[j++]$
-  \EndWhile
-  \For{$i = 0 \to k-1$}
-    \State $Array[left + i] \gets B[i]$
-  \EndFor
-  \State \Return{$result$}
-\EndFunction
-\end{algorithmic}
-\end{algorithm}
+\STATE $res \leftarrow 0$
+\SWITCH {$num$}
+  \CASE {$0$}
+    \STATE $res \leftarrow 1$
+  \ENDCASE
+  \CASE {$1$}
+    \STATE $res \leftarrow 1$
+  \ENDCASE
+  \DEFAULT
+    \STATE $res \leftarrow fibonacci(num-1) + fibonacci(num-2)$
+  \ENDDEFAULT
+\ENDSWITCH
 
-这是写在算法\ref{algo:merge_sort}后面的一段话，
-但是当算法\ref{algo:merge_sort}不使用\verb+\begin{algorithm}[H]+时它会出现在算法\ref{algo:merge_sort}
-甚至算法\ref{algo:sum_100}前面。
-
-对于算法的索引要注意\verb+\caption+和\verb+\label+的位置, 
-必须是先\verb+\caption+再\verb+\label+\footnote{http://tex.stackexchange.com/questions/65993/algorithm-numbering}，
-否则会出现\verb+\ref{algo:sum_100}+生成的编号跟对应算法上显示不一致的问题。
-
-根据Werner的回答\footnote{http://tex.stackexchange.com/questions/53357/switch-cases-in-algorithmic}
-增加了\verb+Switch+和\verb+Case+的支持，见算法\ref{algo:switch_example}。
-
-\begin{algorithm}
-\caption{Switch示例}
-\label{algo:switch_example}
-\begin{algorithmic}[1]
-  \Switch{$s$}
-    \Case{$a$}
-      \Assert{0}
-    \EndCase
-    \Case{$b$}
-      \Assert{1}
-    \EndCase
-    \Default
-      \Assert{2}
-    \EndDefault
-  \EndSwitch
+\RETURN $res$
 \end{algorithmic}
 \end{algorithm}

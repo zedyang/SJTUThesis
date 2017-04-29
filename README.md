@@ -1,4 +1,27 @@
+# 对原Repo的修改
+
+这个repo是我对于[上海交通大学学位论文模板](https://github.com/weijianwen/SJTUThesis/)的修改版本，感谢原作者的工作！主要修改如下：
+
+1. 加入了一个小插件`importFonts_external.sty`，直接使用项目`font`目录下的字体。不需要安装字体。解决了使用sublime-latextools等工具尝试直接编译项目时找不到字体的问题。同时也便于更换其他字体。
+2. 与之对应地，在`thesis.tex`中加入了一行usepackage。
+3. 我用英文撰写毕设，因此将原项目中一些中文标题、条目（如index、acknowledgement等）都改成了英文。
+
+**测试环境**: 
+- OS X El Caitan 10.11.6
+- `MacTex` 2016
+- 使用sublime text 2的`LaTexTools`插件直接从文本编辑器里编译。版本号3.13.6。
+
+**Trouble Shooting**
+El Caitan下和路径相关的bug很多都是同一个原因引起的: Tex相关的binary files不再存在于`/usr/texbin`, 而是`/Library/TeX/texbin`。所以将各种设置中以前者开头的路径名改为后者，基本都能够解决。详情可见[这里](https://tex.stackexchange.com/questions/274179/mactex-error-xelatex-command-not-found)。
+
+
+以下为原项目的readme，再次感谢原作者😃。
+
+
+
+
 # 上海交通大学学位论文模板
+
 
 这是为撰写上海交通大学学士、硕士或博士论文而准备的 XeLaTeX 模板，非官方出品。生成的学位论文文件参见 [README.pdf][README]，详细使用说明参见 [SJTUThesis Wiki](https://github.com/weijianwen/SJTUThesis/wiki)，欢迎大家分享使用经验。
 
@@ -10,11 +33,15 @@ SJTUThesis可以在本地编译，也可以在线编译。
 
 #### TeX 发行版
 
-SJTUThesis 需要使用 XeTeX 引擎编译。2016年的 [TeXLive](https://www.tug.org/texlive/) 和 [MacTeX](https://www.tug.org/mactex/) 发行版都能编译此模板。Windows 下的 CTeX(2.9.2) 也能顺利编译此模板。**Windows用户**推荐使用 [Babun](http://babun.github.io/) 作为命令行终端。Babun 已默认安装有这些工具：git(版本控制)、GNUmake(编译控制)、perl(字数统计)。
+SJTUThesis 需要使用 XeTeX 引擎编译。2014和2015年的 [TeXLive](https://www.tug.org/texlive/) 和 [MacTeX](https://www.tug.org/mactex/) 发行版都能编译此模板。Windows 下的 CTeX(2.9.2) 也能顺利编译此模板。**Windows用户**推荐使用 [Babun](http://babun.github.io/) 作为命令行终端。Babun 已默认安装有这些工具：git(版本控制)、GNUmake(编译控制)、perl(字数统计)。
 
 #### 字体
 
 中英文分别依赖 Adobe 的四套简体中文字体和 TeX Gyre Termes 西文字体。Tex Gyre Termes 可从 [CTAN](http://www.ctan.org/tex-archive/fonts/tex-gyre/fonts/opentype/public/tex-gyre) 下载四种不同字型。出于版权考虑，需要大家自行解决 AdobeSongStd, AdobeKaitiStd, AdobeHeitiStd, AdobeFangsongStd 四款中文字体的授权问题。
+
+### 在线编译 - ShareLaTeX
+
+[ShareLaTeX](https://www.sharelatex.com/) 是一个优秀的 LaTeX 在线编译站点，可以完成 SJTUThesis 0.8.1 版本的编译。在[SJTUThesis-0.8](https://www.sharelatex.com/project/56701ac8d63cd1d9646a622f)页面将该项目复制到自己的列表中，就可以开始在模版上工作了。更详细的使用说明，请参考[Usage - 使用文档](https://github.com/weijianwen/SJTUThesis/wiki/Usage)。
 
 ### 获取模板
 
@@ -38,9 +65,12 @@ git pull upstream master
 
 SJTUThesis提供了多个稳定版供您使用，这些版本的输出结果具有相近的外观，但依赖不同的TeXLive发行版和参考文献处理程序。
 
-| TeXLive发行版 | 参考文献风格  | SJTUThesis版本 |
-|---------------|---------------|----------------|
-| 2016          | GB7714        | [0.9.5][0.9.5] |
+| TeXLive发行版 | 参考文献处理程序             | SJTUThesis版本 |
+|---------------|------------------------------|----------------|
+| 2015          | biber+biblatex+caspervector  | [0.9.3][0.9.3] |
+| 2015          | bibtex+GBT7714-2005NLang.bst | [0.7.7][0.7.7] |
+| 2014          | biber+biblatex+caspervector  | [0.8.7][0.8.7] |
+| 2013          | bibtex+GBT7714-2005NLang.bst | [0.7.1][0.7.1] |
 
 ### 编译模板
 
@@ -89,4 +119,7 @@ SJTUThesis提供了多个稳定版供您使用，这些版本的输出结果具�
 上海交通大学校徽图片(`sjtulog.png`)和横幅图片(`sjtubanner.png`)的版权归原作者所有。其他部分使用 [Apache License 2.0](LICENSE) 授权。
 
 [README]: https://s3.amazonaws.com/sjtuthesis/README.pdf
-[0.9.5]: https://github.com/weijianwen/SJTUThesis/releases/tag/0.9.5
+[0.9.3]: https://github.com/weijianwen/SJTUThesis/releases/tag/0.9.3
+[0.8.7]: https://github.com/weijianwen/SJTUThesis/releases/tag/0.8.7
+[0.7.7]: https://github.com/weijianwen/SJTUThesis/releases/tag/0.7.7
+[0.7.1]: https://github.com/weijianwen/SJTUThesis/releases/tag/0.7.1
