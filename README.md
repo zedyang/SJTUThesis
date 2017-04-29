@@ -5,6 +5,7 @@
 1. 加入了一个小插件`importFonts_external.sty`，直接使用项目`font`目录下的字体。不需要安装字体。解决了使用sublime-latextools等工具尝试直接编译项目时找不到字体的问题。同时也便于更换其他字体。
 2. 与之对应地，在`thesis.tex`中加入了一行usepackage。
 3. 我用英文撰写毕设，因此将原项目中一些中文标题、条目（如index、acknowledgement等）都改成了英文。
+4. `example.tex`中和算法伪代码相关的内容删去了，因为我没装相关的库。
 
 **测试环境**: 
 - OS X El Capitan 10.11.6
