@@ -4,13 +4,13 @@
 
 1. 加入了一个小插件`importFonts_external.sty`，直接使用本项目`fonts`目录下的字体。不需要安装字体。解决了使用sublime-latextools等工具尝试直接编译项目时找不到字体的问题。同时也便于更换其他字体。
 2. 与之对应地，在`thesis.tex`中加入了一行usepackage。
-3. 我用英文撰写毕设，因此将原项目中一些中文标题、条目（如index、acknowledgement等）都改成了英文。
+3. 我用英文撰写毕设，因此将原项目中一些中文标题、条目（如Index、Acknowledgement等）都改成了英文。
 4. `example.tex`中和算法伪代码相关的内容删去了，因为我没装相关的库。
 
 **测试环境**: 
 - OS X El Capitan 10.11.6
-- `MacTex` 2016
-- 使用sublime text 2的`LaTexTools`插件直接从文本编辑器里编译。版本号3.13.6。
+- MacTex 2016
+- 使用Sublime Text 2的LaTexTools插件直接从文本编辑器里编译。版本号3.13.6。
 
 **Trouble Shooting**:
 - El Capitan下和路径相关的bug很多都是同一个原因引起的: Tex相关的binary files不再存在于`/usr/texbin`, 而是`/Library/TeX/texbin`。所以将各种设置中以前者开头的路径名改为后者，基本都能够解决。详情可见[这里](https://tex.stackexchange.com/questions/274179/mactex-error-xelatex-command-not-found)。
