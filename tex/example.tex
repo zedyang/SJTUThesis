@@ -6,78 +6,78 @@
 %% Encoding: UTF-8
 %%==================================================
 
-\chapter{ \LaTeX 排版例子}
+\chapter{ \LaTeX Example}
 \label{chap:example}
 
-\section{列表环境}
+\section{Lists}
 \label{sec:list}
 
-\subsection{无序列表}
+\subsection{Unordered List}
 \label{sec:unorderlist}
 
-以下是一个无序列表的例子，列表的每个条目单独分段。
+The aperture was black with a darkness almost material. That tenebrousness was indeed a positive quality; for it obscured such parts of the inner walls as ought to have been revealed, and actually burst forth like smoke from its aeon-long imprisonment, visibly darkening the sun as it slunk away into the shrunken and gibbous sky on flapping membraneous wings. The odour rising from the newly opened depths was intolerable, and at length the quick-eared Hawkins thought he heard a nasty, slopping sound down there. Everyone listened, and everyone was listening still when It lumbered slobberingly into sight and gropingly squeezed Its gelatinous green immensity through the black doorway into the tainted outside air of that poison city of madness. 
+
 
 \begin{itemize}
-  \item 这是一个无序列表。
-  \item 这是一个无序列表。
-  \item 这是一个无序列表。
+  \item Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn.
+  \item Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn.
+  \item Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn.
 \end{itemize}
 
-使用\verb+itemize*+环境可以创建行内无序列表。
-\begin{itemize*}
-  \item 这是一个无序列表。
-  \item 这是一个无序列表。
-  \item 这是一个无序列表。
-\end{itemize*}
-行内无序列表条目不单独分段，所有内容直接插入在原文的段落中。
+The odour rising from the newly opened depths was intolerable, and at length the quick-eared Hawkins thought he heard a nasty, slopping sound down there. Everyone listened, and everyone was listening still when It lumbered slobberingly into sight and gropingly squeezed Its gelatinous green immensity through the black doorway into the tainted outside air of that poison city of madness. 
 
-\subsection{有序列表}
+\begin{itemize*}
+  \item Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn.
+  \item Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn.。
+  \item Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn.
+\end{itemize*}
+
+\subsection{Ordered List}
 \label{sec:orderlist}
 
-使用环境\verb+enumerate+和\verb+enumerate*+创建有序列表,
-使用方法无序列表类似。
+Poor Johansen's handwriting almost gave out when he wrote of this. Of the six men who never reached the ship, he thinks two perished of pure fright in that accursed instant. The Thing cannot be described - there is no language for such abysms of shrieking and immemorial lunacy, such eldritch contradictions of all matter, force, and cosmic order. A mountain walked or stumbled. God! What wonder that across the earth a great architect went mad, and poor Wilcox raved with fever in that telepathic instant? The Thing of the idols, the green, sticky spawn of the stars, had awaked to claim his own. The stars were right again, and what an age-old cult had failed to do by design, a band of innocent sailors had done by accident. After vigintillions of years great Cthulhu was loose again, and ravening for delight. 
 
 \begin{enumerate}
-  \item 这是一个有序列表。
-  \item 这是一个有序列表。
-  \item 这是一个有序列表。
+  \item Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn.
+  \item Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn.
+  \item Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn.
 \end{enumerate}
 
-使用\verb+enumerate*+环境可以创建行内有序列表。
+ A mountain walked or stumbled. God! What wonder that across the earth a great architect went mad, and poor Wilcox raved with fever in that telepathic instant? The Thing of the idols, the green, sticky spawn of the stars, had awaked to claim his own. The stars were right again, and what an age-old cult had failed to do by design, a band of innocent sailors had done by accident. After vigintillions of years great Cthulhu was loose again, and ravening for delight. 
+
 \begin{enumerate*}
-  \item 这是一个默认有序列表。
-  \item 这是一个默认有序列表。
-  \item 这是一个默认有序列表。
+  \item Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn.
+  \item Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn.
+  \item Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn.
 \end{enumerate*}
-行内有序列表条目不单独分段，所有内容直接插入在原文的段落中。
 
-\subsection{描述型列表}
+\subsection{Descriptive List}
 
-使用环境\verb+description+可创建带有主题词的列表，条目语法是\verb+\item[主题] 内容+。
+The stars were right again, and what an age-old cult had failed to do by design, a band of innocent sailors had done by accident. After vigintillions of years great Cthulhu was loose again, and ravening for delight. 
+
 \begin{description}
-    \item[主题一] 详细内容
-    \item[主题二] 详细内容
-    \item[主题三] 详细内容 \ldots
+    \item[theme 1] Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn.
+    \item[theme 2] Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn.
+    \item[theme 3] \ldots
 \end{description}
 
-\subsection{自定义列表样式}
+\subsection{Customized List}
 
-可以使用\verb+label+参数控制列表的样式，
-详细可以参考WikiBooks\footnote{\url{https://en.wikibooks.org/wiki/LaTeX/List_Structures\#Customizing_lists}}。
-比如一个自定义样式的行内有序列表
+Cthulhu still lives, too, I suppose, again in that chasm of stone which has shielded him since the sun was young. His accursed city is sunken once more, for the Vigilant sailed over the spot after the April storm; but his ministers on earth still bellow and prance and slay around idol-capped monoliths in lonely places. He must have been trapped by the sinking whilst within his black abyss, or else the world would by now be screaming with fright and frenzy. Who knows the end? What has risen may sink, and what has sunk may rise. 
+
 \begin{enumerate*}[label=\itshape\alph*)\upshape]
-  \item 这是一个自定义样式有序列表。
-  \item 这是一个自定义样式有序列表。
-  \item 这是一个自定义样式有序列表。
+  \item Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn.
+  \item Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn.
+  \item Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn.
 \end{enumerate*}
 
-\section{数学排版}
+\section{Math}
 \label{sec:matheq}
 
-\subsection{公式排版}
+\subsection{Equations}
 \label{sec:eqformat}
 
-这里有举一个长公式排版的例子，来自\href{http://www.tex.ac.uk/tex-archive/info/math/voss/mathmode/Mathmode.pdf}{《Math mode》}：
+Loathsomeness waits and dreams in the deep, and decay spreads over the tottering cities of men. A time will come - but I must not and cannot think! Let me pray that, if I do not survive this manuscript, my executors may put caution before audacity and see that it meets no other eye. 
 
 \begin {multline}
   \frac {1}{2}\Delta (f_{ij}f^{ij})=
@@ -88,14 +88,12 @@
       \nabla _{k}R_{ij}\right ]\vphantom {\sum _{i<j}}\right )
 \end{multline}
 
-\subsection{SI单位}
+Poor Johansen's handwriting almost gave out when he wrote of this. Of the six men who never reached the ship, he thinks two perished of pure fright in that accursed instant. The Thing cannot be described - there is no language for such abysms of shrieking and immemorial lunacy, such eldritch contradictions of all matter, force, and cosmic order.
 
-使用\verb+siunitx+宏包可以方便地输入SI单位制单位，例如\verb+\SI{5}{\um}+可以得到\SI{5}{\um}。
-
-\subsubsection{一个四级标题}
+\subsubsection{A 4-th level subtitle}
 \label{sec:depth4}
 
-这是全文唯一的一个四级标题。在这部分中将演示了mathtools宏包中可伸长符号（箭头、等号的例子）的例子。
+Cthulhu still lives, too, I suppose, again in that chasm of stone which has shielded him since the sun was young. His accursed city is sunken once more, for the Vigilant sailed over the spot after the April storm; but his ministers on earth still bellow and prance and slay around idol-capped monoliths in lonely places. He must have been trapped by the sinking whilst within his black abyss, or else the world would by now be screaming with fright and frenzy. Who knows the end? What has risen may sink, and what has sunk may rise. 
 
 \begin{displaymath}
     A \xleftarrow[n=0]{} B \xrightarrow[LongLongLongLong]{n>0} C 
@@ -107,7 +105,7 @@
   & \xLeftrightarrow[below]{above} & B
 \end{eqnarray}
 
-又如：
+And:
 
 \begin{align}
   \label{eq:none}
@@ -116,24 +114,21 @@
   = & I(X_1;X_3;X_4)-I(X_3;X_4\mid{}\tilde{X}_2)
 \end{align}
 
-\subsection{定理环境}
+\subsection{Theorems}
 
-模板中定义了丰富的定理环境
-algo(算法)，thm(定理)，lem(引理)，prop(命题)，cor(推论)，defn(定义)，conj(猜想)，exmp(例)，rem(注)，case(情形)，
-bthm(断言定理)，blem(断言引理)，bprop(断言命题)，bcor(断言推论)。
-amsmath还提供了一个proof(证明)的环境。
-这里举一个“定理”和“证明”的例子。
-\begin{thm}[留数定理]
+The aperture was black with a darkness almost material. That tenebrousness was indeed a positive quality; for it obscured such parts of the inner walls as ought to have been revealed, and actually burst forth like smoke from its aeon-long imprisonment, visibly darkening the sun as it slunk away into the shrunken and gibbous sky on flapping membraneous wings. The odour rising from the newly opened depths was intolerable, and at length the quick-eared Hawkins thought he heard a nasty, slopping sound down there. Everyone listened, and everyone was listening still when It lumbered slobberingly into sight and gropingly squeezed Its gelatinous green immensity through the black doorway into the tainted outside air of that poison city of madness.
+
+\begin{thm}[fhtagn]
 \label{thm:res}
-  假设$U$是复平面上的一个单连通开子集，$a_1,\ldots,a_n$是复平面上有限个点，$f$是定义在$U\backslash \{a_1,\ldots,a_n\}$上的全纯函数，
-  如果$\gamma$是一条把$a_1,\ldots,a_n$包围起来的可求长曲线，但不经过任何一个$a_k$，并且其起点与终点重合，那么：
+  Assume $U$ is a Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn on complex space，$a_1,\ldots,a_n$R'lyeh wgah'nagl points，$f$ is defined on $U\backslash \{a_1,\ldots,a_n\}$ R'lyeh wgah'nagl fhtagn.
+  If $\gamma$ is a curve that Ph'nglui mglw'nafh $a_1,\ldots,a_n$, whose Ph'nglui mglw'nafh but not $a_k$ fhtagn, then
 
   \begin{equation}
     \label{eq:res}
     \ointop_{\gamma}f(z)\,\mathrm{d}z = 2\uppi\mathbf{i}\sum^n_{k=1}\mathrm{I}(\gamma,a_k)\mathrm{Res}(f,a_k)
   \end{equation}
 
-  如果$\gamma$是若尔当曲线，那么$\mathrm{I}(\gamma, a_k)=1$，因此：
+  If $\gamma$ is a Jordan fhtagn，then $\mathrm{I}(\gamma, a_k)=1$, therefore 
 
   \begin{equation}
     \label{eq:resthm}
@@ -142,46 +137,35 @@ amsmath还提供了一个proof(证明)的环境。
 
       % \oint_\gamma f(z)\, dz = 2\pi i \sum_{k=1}^n \mathrm{Res}(f, a_k ). 
 
-  在这里，$\mathrm{Res}(f, a_k)$表示$f$在点$a_k$的留数，$\mathrm{I}(\gamma,a_k)$表示$\gamma$关于点$a_k$的卷绕数。
-  卷绕数是一个整数，它描述了曲线$\gamma$绕过点$a_k$的次数。如果$\gamma$依逆时针方向绕着$a_k$移动，卷绕数就是一个正数，
-  如果$\gamma$根本不绕过$a_k$，卷绕数就是零。
+  Cthulhu still lives, too, I suppose, again in that chasm of stone which has shielded him since the sun was young. His accursed city is sunken once more, for the Vigilant sailed over the spot after the April storm; but his ministers on earth still bellow and prance and slay around idol-capped monoliths in lonely places. He must have been trapped by the sinking whilst within his black abyss, or else the world would by now be screaming with fright and frenzy. Who knows the end? What has risen may sink, and what has sunk may rise. 
 
-  定理\ref{thm:res}的证明。
+  Proof of \ref{thm:res}.
   
   \begin{proof}
-    首先，由……
+    Firstly,
 
-    其次，……
-
-    所以……
+    Second, ...
+    
+    Therefore ...
   \end{proof}
 \end{thm}
 
-上面的公式例子中，有一些细节希望大家注意。微分号d应该使用“直立体”也就是用mathrm包围起来。
-并且，微分号和被积函数之间应该有一段小间隔，可以插入\verb+\,+得到。
-斜体的$d$通常只作为一般变量。
-i,j作为虚数单位时，也应该使用“直立体”为了明显，还加上了粗体，例如\verb+\mathbf{i}+。斜体$i,j$通常用作表示“序号”。
-其他字母在表示常量时，也推荐使用“直立体”譬如，圆周率$\uppi$（需要upgreek宏包），自然对数的底$\mathrm{e}$。
-不过，我个人觉得斜体的$e$和$\pi$很潇洒，在不至于引起混淆的情况下，我也用这两个字母的斜体表示对应的常量。
+Cthulhu still lives, too, I suppose, again in that chasm of stone which has shielded him since the sun was young. His accursed city is sunken once more, for the Vigilant sailed over the spot after the April storm; but his ministers on earth still bellow and prance and slay around idol-capped monoliths in lonely places. He must have been trapped by the sinking whilst within his black abyss, or else the world would by now be screaming with fright and frenzy. Who knows the end? What has risen may sink, and what has sunk may rise. 
 
-
-\section{向文档中插入图像}
+\section{Images}
 \label{sec:insertimage}
 
-\subsection{支持的图片格式}
+\subsection{Image Format}
 \label{sec:imageformat}
 
-\XeTeX 可以很方便地插入PDF、PNG、JPG格式的图片。
-
-插入PNG/JPG的例子如\ref{fig:SRR}所示。
-这两个水平并列放置的图共享一个“图标题”(table caption)，没有各自的小标题。
+Cthulhu still lives, too, I suppose, again in that chasm of stone which has shielded him since the sun was young. His accursed city is sunken once more, for the Vigilant sailed over the spot after the April storm; but his ministers on earth still bellow and prance and slay around idol-capped monoliths in lonely places. He must have been trapped by the sinking whilst within his black abyss, or else the world would by now be screaming with fright and frenzy. Who knows the end? What has risen may sink, and what has sunk may rise. 
 
 \begin{figure}[!htp]
   \centering
   \includegraphics[width=0.3\textwidth]{example/sjtulogo.png}
   \hspace{1cm}
   \includegraphics[width=0.3\textwidth]{example/sjtulogo.jpg}
-  \caption[fig:SRR]{这里将出现在插图索引中}{中文题图}{Fig}{English caption}
+  \caption[fig:SRR]{Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn.}{}{Fig}{English caption}
 \end{figure}
 
 % 这里还有插入eps图像和pdf图像的例子，如图\ref{fig:epspdf:a}和图\ref{fig:epspdf:b}。这里将EPS和PDF图片作为子图插入，每个子图有自己的小标题。并列子图的功能是使用subfigure宏包提供的。
@@ -198,18 +182,17 @@ i,j作为虚数单位时，也应该使用“直立体”为了明显，还加�
 %   \caption[fig:pdfeps]{插入eps图像和pdf图像}{插入eps和pdf的例子}{Fig}{An EPS and PDF demo}
 % \end{figure}
 
-更多关于 \LaTeX 插图的例子可以参考\href{http://www.cs.duke.edu/junhu/Graphics3.pdf}{《\LaTeX 插图指南》}。
+Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn.
 
-\subsection{长标题的换行}
+\subsection{Long Captions}
 \label{sec:longcaption}
 
-图\ref{fig:longcaptionbad}和图\ref{fig:longcaptiongood}都有比较长图标题，通过对比发现，图\ref{fig:longcaptiongood}的换行效果更好一些。
-其中使用了minipage环境来限制整个浮动体的宽度。
+Cthulhu still lives, too, I suppose, again in that chasm of stone which has shielded him since the sun was young. His accursed city is sunken once more, for the Vigilant sailed over the spot after the April storm; but his ministers on earth still bellow and prance and slay around idol-capped monoliths in lonely places. He must have been trapped by the sinking whilst within his black abyss, or else the world would by now be screaming with fright and frenzy. Who knows the end? What has risen may sink, and what has sunk may rise. 
 
 \begin{figure}[!htp]
  \centering
  \includegraphics[width=4cm]{example/sjtulogo.pdf}
- \caption[fig:longcaptionbad]{这里将出现在插图索引}{海交通大学是我国历史最悠久的高等学府之一，是教育部直属、教育部与上海市共建的全国重点大学.}{Fig}{Where there is a will, there is a way.}
+ \caption[fig:longcaptionbad]{}{}{Fig}{Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn.}
 \end{figure}
 
 \begin{figure}[!htbp]
@@ -218,18 +201,18 @@ i,j作为虚数单位时，也应该使用“直立体”为了明显，还加�
     %\captionstyle{\centering}
     \centering
     \includegraphics[width=4cm]{example/sjtulogo.pdf}
-    \caption[fig:longcaptiongood]{这里将出现在插图索引}{海交通大学是我国历史最悠久的高等学府之一，是教育部直属、教育部与上海市共建的全国重点大学.}{Fig}{Where there is a will, there is a way.}
+    \caption[fig:longcaptiongood]{}{}{Fig 2}{Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn.}
   \end{minipage}     
 \end{figure}
 
-\section{表格}
+\section{Tables}
 \label{sec:tab}
 
-这一节给出的是一些表格的例子，如表\ref{tab:firstone}所示。
+His accursed city is sunken once more, for the Vigilant sailed over the spot after the April storm; but his ministers on earth still bellow and prance and slay around idol-capped monoliths in lonely places. He must have been trapped by the sinking whilst within his black abyss, or else the world would by now be screaming with fright and frenzy. Who knows the end? What has risen may sink, and what has sunk may rise. 
 
 \begin{table}[!hpb]
   \centering
-  \caption[tab:firstone]{指向一个表格的表目录索引}{一个颇为标准的三线表格\footnotemark[1]}{Table}{A Table}
+  \caption[tab:firstone]{\footnotemark[1]}{Table}{A Table}
   \begin{tabular}{@{}llr@{}} \toprule
     \multicolumn{2}{c}{Item} \\ \cmidrule(r){1-2}
     Animal & Description & Price (\$)\\ \midrule
@@ -240,12 +223,12 @@ i,j作为虚数单位时，也应该使用“直立体”为了明显，还加�
     Armadillo & frozen & 8.99 \\ \bottomrule
   \end{tabular}
 \end{table}
-\footnotetext[1]{这个例子来自\href{http://www.ctan.org/tex-archive/macros/latex/contrib/booktabs/booktabs.pdf}{《Publication quality tables in LATEX》}(booktabs宏包的文档)。这也是一个在表格中使用脚注的例子，请留意与threeparttable实现的效果有何不同。}
+\footnotetext[1]{His accursed city is sunken once more \href{http://www.ctan.org/tex-archive/macros/latex/contrib/booktabs/booktabs.pdf}{Publication quality tables in LATEX}}
 
-下面一个是一个更复杂的表格，用threeparttable实现带有脚注的表格，如表\ref{tab:footnote}。
+His accursed city is sunken once more.
 
 \begin{table}[!htpb]
-  \caption[tab:footnote]{出现在表目录的标题}{一个带有脚注的表格的例子}{Table}{A Table with footnotes}
+  \caption[tab:footnote]{}{}{Table}{A Table with footnotes}
   \centering
   \begin{threeparttable}[b]
      \begin{tabular}{ccd{4}cccc}
@@ -266,65 +249,42 @@ i,j作为虚数单位时，也应该使用“直立体”为了明显，还加�
   \end{threeparttable}
 \end{table}
 
-\section{参考文献管理}
+\section{References}
 
- \LaTeX 具有将参考文献内容和表现形式分开管理的能力，涉及三个要素：参考文献数据库、参考文献引用格式、在正文中引用参考文献。
-这样的流程需要多次编译：
+Poor Johansen's handwriting almost gave out when he wrote of this. Of the six men who never reached the ship, he thinks two perished of pure fright in that accursed instant. The Thing cannot be described - there is no language for such abysms of shrieking and immemorial lunacy, such eldritch contradictions of all matter, force, and cosmic order.
 
-\begin{enumerate}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
-	\item 用户将论文中需要引用的参考文献条目，录入纯文本数据库文件(bib文件)。
-	\item 调用xelatex对论文模板做第一次编译，扫描文中引用的参考文献，生成参考文献入口文件(aux)文件。
-	\item 调用bibtex，以参考文献格式和入口文件为输入，生成格式化以后的参考文献条目文件(bib)。
-	\item 再次调用xelatex编译模板，将格式化以后的参考文献条目插入正文。
-\end{enumerate}
+Poor Johansen's handwriting almost gave out when he wrote of this. Of the six men who never reached the ship, he thinks two perished of pure fright in that accursed instant. The Thing cannot be described - there is no language for such abysms of shrieking and immemorial lunacy, such eldritch contradictions of all matter, force, and cosmic order.
 
-参考文献数据库(thesis.bib)的条目，可以从Google Scholar搜索引擎\footnote{\url{https://scholar.google.com}}、CiteSeerX搜索引擎\footnote{\url{http://citeseerx.ist.psu.edu}}中查找，文献管理软件Papers\footnote{\url{http://papersapp.com}}、Mendeley\footnote{\url{http://www.mendeley.com}}、JabRef\footnote{\url{http://jabref.sourceforge.net}}也能够输出条目信息。
+Cthulhu still lives, too, I suppose, again in that chasm of stone which has shielded him since the sun was young. His accursed city is sunken once more, for the Vigilant sailed over the spot after the April storm; but his ministers on earth still bellow and prance and slay around idol-capped monoliths in lonely places. He must have been trapped by the sinking whilst within his black abyss, or else the world would by now be screaming with fright and frenzy. Who knows the end? What has risen may sink, and what has sunk may rise. 
 
-下面是在Google Scholar上搜索到的一条文献信息，格式是纯文本：
-
-\begin{lstlisting}[caption={从Google Scholar找到的参考文献条目}, label=googlescholar, escapeinside="", numbers=none]
-    @phdthesis{"白2008信用风险传染模型和信用衍生品的定价",
-      title={"信用风险传染模型和信用衍生品的定价"},
-      author={"白云芬"},
-      year={2008},
-      school={"上海交通大学"}
+\begin{lstlisting}[caption={Google Scholar}, label=googlescholar, escapeinside="", numbers=none]
+    @phdthesis{"Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn.",
+      title={"Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn."},
+      author={"Unknown"},
+      year={1931},
+      school={"Miskatonic University"}
     } 
 \end{lstlisting}
 
 推荐修改后在bib文件中的内容为：
 
-\begin{lstlisting}[caption={修改后的参考文献条目}, label=itemok, escapeinside="", numbers=none]
-  @phdthesis{bai2008,
-    title={"信用风险传染模型和信用衍生品的定价"},
-    author={"白云芬"},
-    date={2008},
-    address={"上海"},
-    school={"上海交通大学"}
+\begin{lstlisting}[caption={Reference}, label=itemok, escapeinside="", numbers=none]
+  @phdthesis{???1930,
+    title={"Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn."},
+    author={"Unknown"},
+    date={1931},
+    address={"Arkham City"},
+    school={"Miskatonic University"}
   } 
 \end{lstlisting}
 
-按照教务处的要求，参考文献外观应符合国标GBT7714的要求\footnote{\url{http://www.cces.net.cn/guild/sites/tmxb/Files/19798_2.pdf}}。
-在模板中，表现形式的控制逻辑通过bibla­tex-gb7714-2015包实现\footnote{\url{https://www.ctan.org/pkg/biblatex-gb7714-2015}}，基于{Bib\LaTeX}管理文献。在目前的多数TeX发行版中，可能都没有默认包含biblatex-gb7714-2015，需要手动安装。
+Cthulhu still lives, too, I suppose, again in that chasm of stone which has shielded him since the sun was young. His accursed city is sunken once more, for the Vigilant sailed over the spot after the April storm; but his ministers on earth still bellow and prance and slay around idol-capped monoliths in lonely places. He must have been trapped by the sinking whilst within his black abyss, or else the world would by now be screaming with fright and frenzy. Who knows the end? What has risen may sink, and what has sunk may rise. 
 
-正文中引用参考文献时，用\verb+\cite{key1,key2,key3...}+可以产生“上标引用的参考文献”，
-如\cite{Meta_CN,chen2007act,DPMG}。
+\section{Code}
 
-总结一些注意事项：
-\begin{itemize}
-\item 参考文献只有在正文中被引用了，才会在最后的参考文献列表中出现；
-\item 参考文献“数据库文件”bib是纯文本文件，请使用UTF-8编码，不要使用GBK编码；
-\item 参考文献条目中默认通过date域输入时间。兼容使用year域时会产生编译warning，可忽略。
-\end{itemize}
+Poor Johansen's handwriting almost gave out when he wrote of this. Of the six men who never reached the ship, he thinks two perished of pure fright in that accursed instant. The Thing cannot be described - there is no language for such abysms of shrieking and immemorial lunacy, such eldritch contradictions of all matter, force, and cosmic order.
 
-\section{用listings插入源代码}
-
-原先ctexbook文档类和listings宏包配合使用时，代码在换页时会出现莫名其妙的错误，后来经高人指点，顺利解决了。
-感兴趣的话，可以看看\href{http://bbs.ctex.org/viewthread.php?tid=53451}{这里}。
-这里给使用listings宏包插入源代码的例子，这里是一段C代码。
-另外，listings宏包真可谓博大精深，可以实现各种复杂、漂亮的效果，想要进一步学习的同学，可以参考
-\href{http://mirror.ctan.org/macros/latex/contrib/listings/listings.pdf}{listings宏包手册}。
-
-\begin{lstlisting}[language={C}, caption={一段C源代码}]
+\begin{lstlisting}[language={C}, caption={C code}]
 #include <stdio.h>
 #include <unistd.h>
 #include <sys/types.h>
